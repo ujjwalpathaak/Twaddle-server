@@ -14,13 +14,13 @@ conn.once('open', () => {
 });
 
 
-export const uploadFile = (request, response) => {
+export const uploadFile = async (request, response) => {
     if(!request.file) 
         return response.status(404).json("File not found");
     
     const imageUrl = `${url}/file/${request.file.filename}`;
 
-    response.status(200).json(imageUrl);    
+    await response.status(200).json(imageUrl);    
 }
 
 export const getImage = async (request, response) => {
