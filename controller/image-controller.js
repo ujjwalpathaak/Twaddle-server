@@ -1,8 +1,7 @@
 import grid from 'gridfs-stream';
 import mongoose from 'mongoose';
 
-const url = 'http://localhost:5000';
-
+const url = 'https://twaddle-server.herokuapp.com'
 
 let gfs, gridfsBucket;
 const conn = mongoose.connection;
