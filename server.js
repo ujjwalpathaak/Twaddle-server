@@ -4,7 +4,7 @@ import Routes from "./routes/Routes.js";
 import bodyParser from "body-parser";
 import cors from "cors";
 
-var port = process.env.PORT || 5000;
+var PORT = process.env.PORT || 5000;
 
 const app = express();
 
@@ -22,6 +22,6 @@ app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Server
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log(`Server running on PORT ${port}`);
 });

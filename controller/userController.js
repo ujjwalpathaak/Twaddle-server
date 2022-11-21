@@ -19,7 +19,7 @@ export const addUser = async (request, response) => {
 export const getUser = async (request, response) => {
   try {
     const users = await User.find({});
-    return response.status(200).json(users);
+    response.status(200).json(users.name);
   } catch (error) {
     response.status(500).json(error);
   }
