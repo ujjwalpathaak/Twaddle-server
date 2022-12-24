@@ -23,5 +23,5 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Server
 app.listen(PORT, () => {
-  console.log(`Server running on PORT ${port}`);
+  console.log(`Server running on PORT ${PORT}`);
 });
