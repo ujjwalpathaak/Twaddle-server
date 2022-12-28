@@ -12,6 +12,7 @@ export const newConversation = async (request, response) => {
     response.status(200).json("conversation already exists");
     return;
   }
+  
   const newConversation = new Conversation({
     members: [senderId, receiverId],
   });

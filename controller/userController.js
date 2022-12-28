@@ -3,7 +3,6 @@ import User from "../model/user.js";
 export const addUser = async (request, response) => {
   try {
     let exist = await User.findOne({ sub: request.body.sub });
-
     if (exist) {
       console.log("reached add user")
       response.status(200).json("user already exists");
@@ -17,6 +16,7 @@ export const addUser = async (request, response) => {
     response.status(500).json(error);
   }
 };
+
 export const getUser = async (request, response) => {
   try {
     const users = await User.find({});
