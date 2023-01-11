@@ -5,6 +5,7 @@ const conversationSchema = new mongoose.Schema(
     members: {
       type: Array,
     },
+    // latest msg
     message: {
       type: String,
     },
